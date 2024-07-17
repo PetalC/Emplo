@@ -1,0 +1,1 @@
+<img{!! $attributeString !!}@if($loadingAttributeValue) loading="{{ $loadingAttributeValue }}"@endif srcset="{{ $media->getSrcset($conversion) }}" src="{{ env( 'APP_ENV' ) === 'local' ? $media->getUrl($conversion) : $media->getTemporaryUrl( \Carbon\Carbon::now()->addMinutes( 5 ) ) }}" width="{{ $width }}" height="{{ $height }}">
